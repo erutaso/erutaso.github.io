@@ -17,7 +17,7 @@
 <li><a href="https://github.com/">GitHub</a>のアカウントを取得していること</li>
 </ul>
 
-<h2>1.VALUEDOMAIN側の設定をする[^1][^2]</h2>
+<h2>1.VALUEDOMAIN側の設定をする</h2>
 
 <p>1.メニューをクリック<br>
 2.取得済みドメイン一覧のDNSレコード/URL転送の変更をクリック<br>
@@ -27,9 +27,6 @@
 
 <p>これでバリュードメイン側の設定は終わり。<br>
 ただ反映されるまで１５分ほどかかるのでその間に次の作業を進めよう。  </p>
-
-<p>[^1]: <a href="http://blog.awairo.net/blog/2013/12/14/custom-domain-for-gh-pages/">GitHub Pagesで独自ドメインを使う方法</a>
-[^2]: <a href="http://blog.lindwurm.biz/2014/04/github-pages-dns-config.html">GitHub Pagesで独自ドメインを使用する際のDNS設定について</a></p>
 
 <h2>2.GitHubでリポジトリを作成する</h2>
 
@@ -138,14 +135,12 @@ $echo example.com &gt; CNAME
 </pre>
 
 <p>とすれば独自ドメインが使用できるようになる。<br>
-階層は <code>tree</code> を使えば一目瞭然だ。[^4]インストールされていない場合は、</p>
+階層は <code>tree</code> を使えば一目瞭然だ。インストールされていない場合は、</p>
 <pre class="highlight plaintext">$apt-get install tree
 $tree -N PATH
 </pre>
 
 <p>としてインストールしておこう。２つ目は文字化け対策らしい。  </p>
-
-<p>[^4]: <a href="http://bukbuntu.blogspot.jp/2010/06/ubuntu-tree.html">ubuntu で tree コマンド</a></p>
 
 <h3>記事を書こう</h3>
 
@@ -167,6 +162,27 @@ $tree -N PATH
 <p>これで最低限の環境は整った。<br>
 CSSやHTMLの設定は私がわからないのでここには書いていない。<br>
 はじめはとても殺風景だろうが、CSSやHTML、JavaScriptの勉強をしながら豪華なウェブサイトを構築してもらいたい。  </p>
+
+<h2>参考</h2>
+
+<ul>
+<li><a href="http://blog.awairo.net/blog/2013/12/14/custom-domain-for-gh-pages/">GitHub Pagesで独自ドメインを使う方法</a></li>
+<li><a href="http://blog.lindwurm.biz/2014/04/github-pages-dns-config.html">GitHub Pagesで独自ドメインを使用する際のDNS設定について</a></li>
+<li><a href="http://bukbuntu.blogspot.jp/2010/06/ubuntu-tree.html">ubuntu で tree コマンド</a></li>
+<li><a href="http://middlemanapp.com/jp/">MIDDLEMAN</a></li>
+<li><a href="http://viral-community.com/twitter/twitter-button-add-480/">３分で終わる！Twitterのツイートボタンとフォローボタンをブログに設置する～4ステップ～</a></li>
+<li><a href="http://washiiku.hatenablog.com/entry/2013/12/01/035808">静的サイト開発にmiddlemanを使う</a></li>
+<li><a href="http://horaotoko.github.io/blog/2014/02/02/make-middleman-blog.html">MiddlemanでGitHub Pagesにブログをつくる</a></li>
+<li><a href="http://qiita.com/znz/items/5471e5826fde29fa9a80">ツールを使いたいだけの人のための bundler 入門 (例: vagrant + veewee)</a></li>
+<li><a href="http://d.hatena.ne.jp/osyo-manga/20140209/1391955805">middleman で構築したサイトを GitHub Pages で公開するまでの流れをまとめてみたAdd Star</a></li>
+<li><a href="http://re-dzine.net/2013/10/wordpress-to-middleman/">ブログをWordPressからMiddlemanに移行してGitHub Pagesで運用するようにしてみた </a></li>
+<li><a href="http://takuya71.hatenablog.com/entry/2014/04/13/233704">Github Pages を独自ドメインで使用する</a></li>
+<li><a href="http://camuro.org/blog/2013/09/renewal.html">WordPressからmiddlemanに移行してGithub Pagesで運用する方法 </a></li>
+<li><a href="http://blob.geishatokyo.com/archives/2014/05/02/yamauchi.html">ブログを WordPress から Middleman + GitHub Pages へ移行しました</a></li>
+<li><a href="http://blog.coiney.com/2013/06/21/host-middleman-blog-on-github/">middleman-blogをgithubでホストする</a></li>
+<li><a href="http://kojika17.com/2013/01/starting-markdown.html">文章作成やメモ書きにも便利、Markdown記法</a></li>
+<li><a href="http://blog.s-amemiya.com/development/emacs%E3%81%AEmarkdown-mode%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%8B/">Emacsのmarkdown-modeを使ってみる</a></li>
+</ul>
 
     </div>
     

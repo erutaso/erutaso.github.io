@@ -14,7 +14,7 @@
     <link rel="alternate" href="http://erutaso.jp/blog/2014/05/05/original-domain-obtained-on-valuedomain-middleman-github-pages/"/>
     <id>http://erutaso.jp/blog/2014/05/05/original-domain-obtained-on-valuedomain-middleman-github-pages/</id>
     <published>2014-05-05T16:25:00+09:00</published>
-    <updated>2014-05-06T00:34:34+09:00</updated>
+    <updated>2014-05-06T00:46:29+09:00</updated>
     <author>
       <name>ginko</name>
     </author>
@@ -25,7 +25,7 @@
 &lt;li&gt;&lt;a href="https://github.com/"&gt;GitHub&lt;/a&gt;のアカウントを取得していること&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2&gt;1.VALUEDOMAIN側の設定をする[^1][^2]&lt;/h2&gt;
+&lt;h2&gt;1.VALUEDOMAIN側の設定をする&lt;/h2&gt;
 
 &lt;p&gt;1.メニューをクリック&lt;br&gt;
 2.取得済みドメイン一覧のDNSレコード/URL転送の変更をクリック&lt;br&gt;
@@ -35,9 +35,6 @@
 
 &lt;p&gt;これでバリュードメイン側の設定は終わり。&lt;br&gt;
 ただ反映されるまで１５分ほどかかるのでその間に次の作業を進めよう。  &lt;/p&gt;
-
-&lt;p&gt;[^1]: &lt;a href="http://blog.awairo.net/blog/2013/12/14/custom-domain-for-gh-pages/"&gt;GitHub Pagesで独自ドメインを使う方法&lt;/a&gt;
-[^2]: &lt;a href="http://blog.lindwurm.biz/2014/04/github-pages-dns-config.html"&gt;GitHub Pagesで独自ドメインを使用する際のDNS設定について&lt;/a&gt;&lt;/p&gt;
 
 &lt;h2&gt;2.GitHubでリポジトリを作成する&lt;/h2&gt;
 
@@ -146,14 +143,12 @@ $echo example.com &amp;gt; CNAME
 &lt;/pre&gt;
 
 &lt;p&gt;とすれば独自ドメインが使用できるようになる。&lt;br&gt;
-階層は &lt;code&gt;tree&lt;/code&gt; を使えば一目瞭然だ。[^4]インストールされていない場合は、&lt;/p&gt;
+階層は &lt;code&gt;tree&lt;/code&gt; を使えば一目瞭然だ。インストールされていない場合は、&lt;/p&gt;
 &lt;pre class="highlight plaintext"&gt;$apt-get install tree
 $tree -N PATH
 &lt;/pre&gt;
 
 &lt;p&gt;としてインストールしておこう。２つ目は文字化け対策らしい。  &lt;/p&gt;
-
-&lt;p&gt;[^4]: &lt;a href="http://bukbuntu.blogspot.jp/2010/06/ubuntu-tree.html"&gt;ubuntu で tree コマンド&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3&gt;記事を書こう&lt;/h3&gt;
 
@@ -175,6 +170,27 @@ $tree -N PATH
 &lt;p&gt;これで最低限の環境は整った。&lt;br&gt;
 CSSやHTMLの設定は私がわからないのでここには書いていない。&lt;br&gt;
 はじめはとても殺風景だろうが、CSSやHTML、JavaScriptの勉強をしながら豪華なウェブサイトを構築してもらいたい。  &lt;/p&gt;
+
+&lt;h2&gt;参考&lt;/h2&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://blog.awairo.net/blog/2013/12/14/custom-domain-for-gh-pages/"&gt;GitHub Pagesで独自ドメインを使う方法&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://blog.lindwurm.biz/2014/04/github-pages-dns-config.html"&gt;GitHub Pagesで独自ドメインを使用する際のDNS設定について&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://bukbuntu.blogspot.jp/2010/06/ubuntu-tree.html"&gt;ubuntu で tree コマンド&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://middlemanapp.com/jp/"&gt;MIDDLEMAN&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://viral-community.com/twitter/twitter-button-add-480/"&gt;３分で終わる！Twitterのツイートボタンとフォローボタンをブログに設置する～4ステップ～&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://washiiku.hatenablog.com/entry/2013/12/01/035808"&gt;静的サイト開発にmiddlemanを使う&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://horaotoko.github.io/blog/2014/02/02/make-middleman-blog.html"&gt;MiddlemanでGitHub Pagesにブログをつくる&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://qiita.com/znz/items/5471e5826fde29fa9a80"&gt;ツールを使いたいだけの人のための bundler 入門 (例: vagrant + veewee)&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://d.hatena.ne.jp/osyo-manga/20140209/1391955805"&gt;middleman で構築したサイトを GitHub Pages で公開するまでの流れをまとめてみたAdd Star&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://re-dzine.net/2013/10/wordpress-to-middleman/"&gt;ブログをWordPressからMiddlemanに移行してGitHub Pagesで運用するようにしてみた &lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://takuya71.hatenablog.com/entry/2014/04/13/233704"&gt;Github Pages を独自ドメインで使用する&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://camuro.org/blog/2013/09/renewal.html"&gt;WordPressからmiddlemanに移行してGithub Pagesで運用する方法 &lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://blob.geishatokyo.com/archives/2014/05/02/yamauchi.html"&gt;ブログを WordPress から Middleman + GitHub Pages へ移行しました&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://blog.coiney.com/2013/06/21/host-middleman-blog-on-github/"&gt;middleman-blogをgithubでホストする&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://kojika17.com/2013/01/starting-markdown.html"&gt;文章作成やメモ書きにも便利、Markdown記法&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://blog.s-amemiya.com/development/emacs%E3%81%AEmarkdown-mode%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6%E3%81%BF%E3%82%8B/"&gt;Emacsのmarkdown-modeを使ってみる&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 </content>
   </entry>
 </feed>
