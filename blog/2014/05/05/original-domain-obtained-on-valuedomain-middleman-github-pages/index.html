@@ -17,7 +17,7 @@
 <li><a href="https://github.com/">GitHub</a>のアカウントを取得していること</li>
 </ul>
 
-<h2>1.VALUEDOMAIN側の設定をする</h2>
+<h2>1.VALUEDOMAIN側の設定をする[^1][^2]</h2>
 
 <p>1.メニューをクリック<br>
 2.取得済みドメイン一覧のDNSレコード/URL転送の変更をクリック<br>
@@ -28,13 +28,16 @@
 <p>これでバリュードメイン側の設定は終わり。<br>
 ただ反映されるまで１５分ほどかかるのでその間に次の作業を進めよう。  </p>
 
+<p>[^1]: <a href="http://blog.awairo.net/blog/2013/12/14/custom-domain-for-gh-pages/">GitHub Pagesで独自ドメインを使う方法</a>
+[^2]: <a href="http://blog.lindwurm.biz/2014/04/github-pages-dns-config.html">GitHub Pagesで独自ドメインを使用する際のDNS設定について</a></p>
+
 <h2>2.GitHubでリポジトリを作成する</h2>
 
 <p>リポジトリを作成する。<br>
 Repository nameは <code>username.github.io</code> とする。usernameは各自のusernameを入れる。<br>
 READMEやLicenseはめんどくさくなるので設定しないほうがいいだろう。  </p>
 
-<h2>3.Middlemanをインストールする</h2>
+<h2>3.Middlemanをインストールする[^3]</h2>
 
 <p>Middlemanとブログ機能？をインストールする。<br>
 よくわからないけどブログのテンプレ的なものがあるらしい。  </p>
@@ -42,10 +45,12 @@ READMEやLicenseはめんどくさくなるので設定しないほうがいい�
 $gem install middleman-blog
 </pre>
 
+<p>[^3]: <a href="http://blog.rythgs.co/archives/2014/05/01/middleman-blog/">Middleman + GitHub Pages でブログ環境を構築する</a></p>
+
 <h3>プロジェクトの初期化</h3>
 
 <p>ブログのプロジェクトを作成する。<br>
-いろいろ便利かなと思って[Dropbox][]においた。一応GitHubで管理しているがこれなら家が燃えても大丈夫だろう。<br>
+いろいろ便利かなと思ってDropboxにおいた。一応GitHubで管理しているがこれなら家が燃えても大丈夫だろう。<br>
 GitHubというディレクトリを作成してその中で作業をする。<br>
 my-blogのところは各自好きなワードを入れるといい。 ex)my-site,mypage,new_project,etc&hellip;<br>
 今回のプロジェクト名はmy-blogで統一する。  </p>
@@ -133,12 +138,14 @@ $echo example.com &gt; CNAME
 </pre>
 
 <p>とすれば独自ドメインが使用できるようになる。<br>
-階層は <code>tree</code> を使えば一目瞭然だ。インストールされていない場合は、</p>
+階層は <code>tree</code> を使えば一目瞭然だ。[^4]インストールされていない場合は、</p>
 <pre class="highlight plaintext">$apt-get install tree
 $tree -N PATH
 </pre>
 
 <p>としてインストールしておこう。２つ目は文字化け対策らしい。  </p>
+
+<p>[^4]: <a href="http://bukbuntu.blogspot.jp/2010/06/ubuntu-tree.html">ubuntu で tree コマンド</a></p>
 
 <h3>記事を書こう</h3>
 

@@ -14,7 +14,7 @@
     <link rel="alternate" href="http://erutaso.jp/blog/2014/05/05/original-domain-obtained-on-valuedomain-middleman-github-pages/"/>
     <id>http://erutaso.jp/blog/2014/05/05/original-domain-obtained-on-valuedomain-middleman-github-pages/</id>
     <published>2014-05-05T16:25:00+09:00</published>
-    <updated>2014-05-06T00:15:30+09:00</updated>
+    <updated>2014-05-06T00:34:34+09:00</updated>
     <author>
       <name>ginko</name>
     </author>
@@ -25,7 +25,7 @@
 &lt;li&gt;&lt;a href="https://github.com/"&gt;GitHub&lt;/a&gt;のアカウントを取得していること&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2&gt;1.VALUEDOMAIN側の設定をする&lt;/h2&gt;
+&lt;h2&gt;1.VALUEDOMAIN側の設定をする[^1][^2]&lt;/h2&gt;
 
 &lt;p&gt;1.メニューをクリック&lt;br&gt;
 2.取得済みドメイン一覧のDNSレコード/URL転送の変更をクリック&lt;br&gt;
@@ -36,13 +36,16 @@
 &lt;p&gt;これでバリュードメイン側の設定は終わり。&lt;br&gt;
 ただ反映されるまで１５分ほどかかるのでその間に次の作業を進めよう。  &lt;/p&gt;
 
+&lt;p&gt;[^1]: &lt;a href="http://blog.awairo.net/blog/2013/12/14/custom-domain-for-gh-pages/"&gt;GitHub Pagesで独自ドメインを使う方法&lt;/a&gt;
+[^2]: &lt;a href="http://blog.lindwurm.biz/2014/04/github-pages-dns-config.html"&gt;GitHub Pagesで独自ドメインを使用する際のDNS設定について&lt;/a&gt;&lt;/p&gt;
+
 &lt;h2&gt;2.GitHubでリポジトリを作成する&lt;/h2&gt;
 
 &lt;p&gt;リポジトリを作成する。&lt;br&gt;
 Repository nameは &lt;code&gt;username.github.io&lt;/code&gt; とする。usernameは各自のusernameを入れる。&lt;br&gt;
 READMEやLicenseはめんどくさくなるので設定しないほうがいいだろう。  &lt;/p&gt;
 
-&lt;h2&gt;3.Middlemanをインストールする&lt;/h2&gt;
+&lt;h2&gt;3.Middlemanをインストールする[^3]&lt;/h2&gt;
 
 &lt;p&gt;Middlemanとブログ機能？をインストールする。&lt;br&gt;
 よくわからないけどブログのテンプレ的なものがあるらしい。  &lt;/p&gt;
@@ -50,10 +53,12 @@ READMEやLicenseはめんどくさくなるので設定しないほうがいい�
 $gem install middleman-blog
 &lt;/pre&gt;
 
+&lt;p&gt;[^3]: &lt;a href="http://blog.rythgs.co/archives/2014/05/01/middleman-blog/"&gt;Middleman + GitHub Pages でブログ環境を構築する&lt;/a&gt;&lt;/p&gt;
+
 &lt;h3&gt;プロジェクトの初期化&lt;/h3&gt;
 
 &lt;p&gt;ブログのプロジェクトを作成する。&lt;br&gt;
-いろいろ便利かなと思って[Dropbox][]においた。一応GitHubで管理しているがこれなら家が燃えても大丈夫だろう。&lt;br&gt;
+いろいろ便利かなと思ってDropboxにおいた。一応GitHubで管理しているがこれなら家が燃えても大丈夫だろう。&lt;br&gt;
 GitHubというディレクトリを作成してその中で作業をする。&lt;br&gt;
 my-blogのところは各自好きなワードを入れるといい。 ex)my-site,mypage,new_project,etc&amp;hellip;&lt;br&gt;
 今回のプロジェクト名はmy-blogで統一する。  &lt;/p&gt;
@@ -141,12 +146,14 @@ $echo example.com &amp;gt; CNAME
 &lt;/pre&gt;
 
 &lt;p&gt;とすれば独自ドメインが使用できるようになる。&lt;br&gt;
-階層は &lt;code&gt;tree&lt;/code&gt; を使えば一目瞭然だ。インストールされていない場合は、&lt;/p&gt;
+階層は &lt;code&gt;tree&lt;/code&gt; を使えば一目瞭然だ。[^4]インストールされていない場合は、&lt;/p&gt;
 &lt;pre class="highlight plaintext"&gt;$apt-get install tree
 $tree -N PATH
 &lt;/pre&gt;
 
 &lt;p&gt;としてインストールしておこう。２つ目は文字化け対策らしい。  &lt;/p&gt;
+
+&lt;p&gt;[^4]: &lt;a href="http://bukbuntu.blogspot.jp/2010/06/ubuntu-tree.html"&gt;ubuntu で tree コマンド&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3&gt;記事を書こう&lt;/h3&gt;
 
