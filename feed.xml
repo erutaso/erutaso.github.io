@@ -14,7 +14,7 @@
     <link rel="alternate" href="http://erutaso.jp/blog/2014/05/05/original-domain-obtained-on-valuedomain-middleman-github-pages/"/>
     <id>http://erutaso.jp/blog/2014/05/05/original-domain-obtained-on-valuedomain-middleman-github-pages/</id>
     <published>2014-05-05T16:25:00+09:00</published>
-    <updated>2014-05-05T21:10:53+09:00</updated>
+    <updated>2014-05-05T21:52:59+09:00</updated>
     <author>
       <name>ginko</name>
     </author>
@@ -25,6 +25,10 @@
 &lt;h2&gt;Middlemanをインストールしよう&lt;/h2&gt;
 
 &lt;p&gt;&lt;code&gt;a&lt;/code&gt;&lt;/p&gt;
+&lt;pre class="highlight ruby"&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;my_cool_method&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;message&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+  &lt;span class="nb"&gt;puts&lt;/span&gt; &lt;span class="n"&gt;message&lt;/span&gt;
+&lt;span class="k"&gt;end&lt;/span&gt;
+&lt;/pre&gt;
 
 &lt;h1&gt;テスト&lt;/h1&gt;
 
