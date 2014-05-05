@@ -14,13 +14,12 @@
     <link rel="alternate" href="http://blog.url.com/blog/2014/05/05/original-domain-obtained-on-valuedomain-middleman-github-pages/"/>
     <id>http://blog.url.com/blog/2014/05/05/original-domain-obtained-on-valuedomain-middleman-github-pages/</id>
     <published>2014-05-05T16:25:00+09:00</published>
-    <updated>2014-05-05T16:36:50+09:00</updated>
+    <updated>2014-05-05T16:37:41+09:00</updated>
     <author>
       <name>Article Author</name>
     </author>
-    <content type="html">&lt;h2&gt;&lt;em&gt;テスト&lt;/em&gt;  &lt;/h2&gt;
-
-&lt;p&gt;aaa&lt;/p&gt;
+    <content type="html">&lt;p&gt;&lt;em&gt;テスト&lt;/em&gt;&lt;br&gt;
+aaa&lt;/p&gt;
 
 &lt;p&gt;a&lt;/p&gt;
 </content>
