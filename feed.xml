@@ -14,7 +14,7 @@
     <link rel="alternate" href="http://erutaso.jp/blog/2014/05/05/original-domain-obtained-on-valuedomain-middleman-github-pages/"/>
     <id>http://erutaso.jp/blog/2014/05/05/original-domain-obtained-on-valuedomain-middleman-github-pages/</id>
     <published>2014-05-05T16:25:00+09:00</published>
-    <updated>2014-05-06T00:46:29+09:00</updated>
+    <updated>2014-05-06T00:48:24+09:00</updated>
     <author>
       <name>ginko</name>
     </author>
@@ -42,15 +42,13 @@
 Repository nameは &lt;code&gt;username.github.io&lt;/code&gt; とする。usernameは各自のusernameを入れる。&lt;br&gt;
 READMEやLicenseはめんどくさくなるので設定しないほうがいいだろう。  &lt;/p&gt;
 
-&lt;h2&gt;3.Middlemanをインストールする[^3]&lt;/h2&gt;
+&lt;h2&gt;3.Middlemanをインストールする&lt;/h2&gt;
 
 &lt;p&gt;Middlemanとブログ機能？をインストールする。&lt;br&gt;
 よくわからないけどブログのテンプレ的なものがあるらしい。  &lt;/p&gt;
 &lt;pre class="highlight plaintext"&gt;$gem install middleman
 $gem install middleman-blog
 &lt;/pre&gt;
-
-&lt;p&gt;[^3]: &lt;a href="http://blog.rythgs.co/archives/2014/05/01/middleman-blog/"&gt;Middleman + GitHub Pages でブログ環境を構築する&lt;/a&gt;&lt;/p&gt;
 
 &lt;h3&gt;プロジェクトの初期化&lt;/h3&gt;
 
@@ -176,6 +174,7 @@ CSSやHTMLの設定は私がわからないのでここには書いていない�
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://blog.awairo.net/blog/2013/12/14/custom-domain-for-gh-pages/"&gt;GitHub Pagesで独自ドメインを使う方法&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://blog.lindwurm.biz/2014/04/github-pages-dns-config.html"&gt;GitHub Pagesで独自ドメインを使用する際のDNS設定について&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://blog.rythgs.co/archives/2014/05/01/middleman-blog/"&gt;Middleman + GitHub Pages でブログ環境を構築する&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://bukbuntu.blogspot.jp/2010/06/ubuntu-tree.html"&gt;ubuntu で tree コマンド&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://middlemanapp.com/jp/"&gt;MIDDLEMAN&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://viral-community.com/twitter/twitter-button-add-480/"&gt;３分で終わる！Twitterのツイートボタンとフォローボタンをブログに設置する～4ステップ～&lt;/a&gt;&lt;/li&gt;
