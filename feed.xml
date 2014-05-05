@@ -14,42 +14,11 @@
     <link rel="alternate" href="http://blog.url.com/blog/2014/05/05/original-domain-obtained-on-valuedomain-middleman-github-pages/"/>
     <id>http://blog.url.com/blog/2014/05/05/original-domain-obtained-on-valuedomain-middleman-github-pages/</id>
     <published>2014-05-05T16:25:00+09:00</published>
-    <updated>2014-05-05T16:42:57+09:00</updated>
+    <updated>2014-05-05T16:44:25+09:00</updated>
     <author>
       <name>Article Author</name>
     </author>
-    <content type="html">&lt;p&gt;&lt;em&gt;テスト&lt;/em&gt;&lt;br&gt;
-aaa&lt;/p&gt;
-
-&lt;p&gt;a&lt;/p&gt;
-
-&lt;p&gt;hogehoge&lt;/p&gt;
-
-&lt;h1&gt;白鳥寮寮飯bot二世&lt;/h1&gt;
-
-&lt;p&gt;白鳥寮の寮飯bot二世です。&lt;/p&gt;
-
-&lt;p&gt;&lt;a href="http://www.ube-k.ac.jp/~Hakuchou_D/"&gt;白鳥寮&lt;/a&gt;&lt;/p&gt;
-
-&lt;h2&gt;使い方&lt;/h2&gt;
-&lt;pre class="highlight plaintext"&gt;$sudo apt-get install gem
-$sudo gem install twitter
-$git clone https://github.com/murakamiginko/hakuchou_D_meshi.git
-$cd hakuchou_D_menu
-$ruby main.rb
-&lt;/pre&gt;
-
-&lt;ul&gt;
-&lt;li&gt;&lt;p&gt;gem twitter を使うので事前にインストールしてください。&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;key.rbにCK/CSを入れてください。&lt;/p&gt;&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;first,second,third.txtにそれぞれ朝のメニュー、昼のメニュー、夜のメニューを入れてください。&lt;/p&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;なんかよくわからないエラーが出る場合は&lt;/p&gt;
-&lt;pre class="highlight plaintext"&gt;$sudo apt-get install ruby-dev libxml2-dev libxslt-dev g++
-&lt;/pre&gt;
-
-&lt;p&gt;くらいをしておけば多分行ける。無理ならエラー文でググれ。&lt;/p&gt;
+    <content type="html">&lt;h2&gt;テスト&lt;/h2&gt;
 </content>
   </entry>
 </feed>
