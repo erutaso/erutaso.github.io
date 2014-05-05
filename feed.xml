@@ -14,15 +14,17 @@
     <link rel="alternate" href="http://erutaso.jp/blog/2014/05/05/original-domain-obtained-on-valuedomain-middleman-github-pages/"/>
     <id>http://erutaso.jp/blog/2014/05/05/original-domain-obtained-on-valuedomain-middleman-github-pages/</id>
     <published>2014-05-05T16:25:00+09:00</published>
-    <updated>2014-05-05T20:43:11+09:00</updated>
+    <updated>2014-05-05T21:10:53+09:00</updated>
     <author>
       <name>ginko</name>
     </author>
-    <content type="html">&lt;p&gt;はじめに書いておくが、これはwebがわからない情弱が躓きながらも承認欲求も満たすためにブログを作ろうとし、その過程を承認欲求を満たすために書いたものなのでググりゃわかるやろｗという人はブラウザバックをおすすめする。  &lt;/p&gt;
+    <content type="html">&lt;p&gt;はじめに書いておくが、これはwebがわからない情弱が躓きながらも承認欲求も満たすためにブログを作ろうとし、その過程を承認欲求を満たすために書いたものなのでググりゃわかるやろｗという人はブラウザバックをおすすめする。&lt;br&gt;
+さらに私は性格が悪いのでわかりにくかったところに対してネチネチとしたツッコミをいれるのでそれが嫌な人もブラウザバックしたほうがいいだろう。&lt;br&gt;
+また、&lt;strong&gt;バリュードメインで独自ドメインを取得済み&lt;/strong&gt;且つ&lt;strong&gt;GitHubのアカウントを持っていること&lt;/strong&gt;が前提である。  &lt;/p&gt;
 
-&lt;p&gt;さらに私は性格が悪いのでわかりにくかったところに対してネチネチとしたツッコミをいれるのでそれが嫌な人もブラウザバックしたほうがいいだろう。  &lt;/p&gt;
+&lt;h2&gt;Middlemanをインストールしよう&lt;/h2&gt;
 
-&lt;p&gt;この記事はバリュードメインで独自ドメインを取得していて尚且つgithubのアカウントを取得していることを前提としているため、&lt;/p&gt;
+&lt;p&gt;&lt;code&gt;a&lt;/code&gt;&lt;/p&gt;
 
 &lt;h1&gt;テスト&lt;/h1&gt;
 
