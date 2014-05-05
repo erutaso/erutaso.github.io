@@ -3,8 +3,6 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv='X-UA-Compatible' content='IE=edge;chrome=1' />
-    <link href="./stylesheets/syntax.css" rel="stylesheet">
-    <meta http-equiv= "content-style-type" content= "text/css">
     <meta content='width=device-width, initial-scale=1.0' name='viewport'>
     <title>えるたそ〜 - バリュードメインで取得した独自ドメインを使ってMiddleman + github pagesでブログを書こう</title>
     <link rel="alternate" type="application/atom+xml" title="Atom Feed" href="/blog/feed.xml" />
@@ -12,7 +10,157 @@
   <body>
     
     <div id="main" role="main">
-      
+      <h1>初めに</h1>
+
+<ul>
+<li><a href="http://www.value-domain.com/">VALUEDOMAIN</a>で独自ドメインを取得していること</li>
+<li><a href="https://github.com/">GitHub</a>のアカウントを取得していること</li>
+</ul>
+
+<h2>1.VALUEDOMAIN側の設定をする</h2>
+
+<p>1.メニューをクリック<br>
+2.取得済みドメイン一覧のDNSレコード/URL転送の変更をクリック<br>
+3.使用したい独自ドメインを選択<br>
+4.設定フィールドに <code>a @ 204.232.175.78</code> と書き加える<br>
+5.保存する  </p>
+
+<p>これでバリュードメイン側の設定は終わり。<br>
+ただ反映されるまで１５分ほどかかるのでその間に次の作業を進めよう。  </p>
+
+<h2>2.GitHubでリポジトリを作成する</h2>
+
+<p>リポジトリを作成する。<br>
+Repository nameは <code>username.github.io</code> とする。usernameは各自のusernameを入れる。<br>
+READMEやLicenseはめんどくさくなるので設定しないほうがいいだろう。  </p>
+
+<h2>3.Middlemanをインストールする</h2>
+
+<p>Middlemanとブログ機能？をインストールする。<br>
+よくわからないけどブログのテンプレ的なものがあるらしい。  </p>
+<pre class="highlight plaintext">$gem install middleman
+$gem install middleman-blog
+</pre>
+
+<h3>プロジェクトの初期化</h3>
+
+<p>ブログのプロジェクトを作成する。<br>
+いろいろ便利かなと思って[Dropbox][]においた。一応GitHubで管理しているがこれなら家が燃えても大丈夫だろう。<br>
+GitHubというディレクトリを作成してその中で作業をする。<br>
+my-blogのところは各自好きなワードを入れるといい。 ex)my-site,mypage,new_project,etc&hellip;<br>
+今回のプロジェクト名はmy-blogで統一する。  </p>
+<pre class="highlight plaintext">$cd ~/Dropbox/GitHub
+$middleman init my-blog --template=blog
+</pre>
+
+<h3>リモートリポジトリの登録</h3>
+
+<p>2で作ったusername.github.ioのリポジトリをremote登録する。  </p>
+<pre class="highlight plaintext">$cd my-blog
+$git init
+$git remote add origin git@github.com:username/username.github.io.git
+</pre>
+
+<h3>Gemfileに書き加える</h3>
+
+<p>ここで色々入れておけばシンタックスカラーリング等できるらしいがあまり理解できていないので恩恵を受けられていない。<br>
+後々便利になることを願って一応書き加えておく。  </p>
+<pre class="highlight plaintext">gem "therubyracer"
+</pre>
+
+<p>はRails云々でエラーが出た時に入れればなんとかなると書いてあったが、私の環境でも同じエラーが出たため一応書き加えておいた。  </p>
+<pre class="highlight plaintext">gem "middleman-deploy"
+gem "middleman-livereload"
+gem "middleman-syntax"
+gem "nokogiri"
+gem 'redcarpet'
+gem "therubyracer"
+</pre>
+
+<p>ここまで終わったら　<code>bundle install</code> しておこう。<br>
+もしbundlerがない場合はインストールしておこう。  </p>
+<pre class="highlight plaintext">$gem install bundler
+</pre>
+
+<h3>config.rbの中身を変更する</h3>
+
+<p>開いてみると色々書いてあるが全部英語なのでとりあえず日本語の記事を探してみた。<br>
+コメントアウトされている中から適当に外していけば形になるらしい。  </p>
+<pre class="highlight plaintext">Time.zone = "Tokyo"
+blog.prefix = "blog"
+</pre>
+
+<p>はタイムゾーンと階層？の名前を設定するらしい。<br>
+例えば、blogをentryとかにすれば<a href="http://erutaso.jp/entry">http://erutaso.jp/entry</a>となる。<br>
+調べたら</p>
+<pre class="highlight plaintext">activate :blog do |blog|
+  blog.name = "dogs"
+  blog.prefix = "dogs"
+end
+</pre>
+
+<p>のようにしていけばいくらでもブログが作れるらしい。  </p>
+
+<p>話がずれたが、その他の設定をしていく。<br>
+細かいレイアウト等の説明はめんどくさいからつまずいたところだけ書いていく。  </p>
+<pre class="highlight plaintext">activate :deploy do |deploy|
+  deploy.method = :git
+  deploy.branch = 'master'
+end
+</pre>
+
+<p>これはデプロイしたときの設定でmasterブランチにpushするという設定らしい。<br>
+だからこれを <code>deploy.branch = &#39;gh-pages&#39;</code> とすれば新しいブランチを作成してそこにpushするらしい。<br>
+ただそこに落とし穴があって、gh-pagesにpushしてもHPに反映されないということだ。<br>
+反映されるのはmasterブランチの中身であってgh-pagesにいくらpushしても本体には反映されないのでcheckoutしておいてrevaseするなりなんなりするといい。  </p>
+
+<h3>デプロイして実際に反映させてみよう</h3>
+
+<p>config.rbの中身をいじったのでデプロイすればブログの枠組みは完成するだろう。<br>
+まだ独自ドメインを設定したり記事を書くにはとかいろいろあるが、とりあえずデプロイしよう。</p>
+<pre class="highlight plaintext">$middleman build &amp;&amp; middleman deploy
+</pre>
+
+<p>初デプロイはなかなか時間がかかるので１５分ほど時間を潰そう。次からはデプロイすればすぐに反映されるだろう。
+これで <code>http://username.github.io</code> にアクセスすればシンプルなひな形とご対面できるだろう。  </p>
+
+<h3>独自ドメインを使用する</h3>
+
+<p>middlemanを使った場合、 <code>username.github.io</code> 直下にCNAMEをおいても意味がない。<br>
+CNAMEの置き場はプロジェクト内のsourceの下だ。なので、</p>
+<pre class="highlight plaintext">$cd ~/Dropbox/GitHub/my-blog/source
+$echo example.com &gt; CNAME
+</pre>
+
+<p>とすれば独自ドメインが使用できるようになる。<br>
+階層は <code>tree</code> を使えば一目瞭然だ。インストールされていない場合は、</p>
+<pre class="highlight plaintext">$apt-get install tree
+$tree -N PATH
+</pre>
+
+<p>としてインストールしておこう。２つ目は文字化け対策らしい。  </p>
+
+<h3>記事を書こう</h3>
+
+<p>ブログの枠組みができたら次は記事を書こう。<br>
+記事を書くためには、</p>
+<pre class="highlight plaintext">$bundle exec middle article "title"
+</pre>
+
+<p>とすれば、source/blogが作成されてそこにタイトルと日付とタグだけが書き込まれたmarkdownファイルが生成される。<br>
+この中身に好きなエディタで記事を書いて保存すれば完成だ。書き終わったら、</p>
+<pre class="highlight plaintext">$middleman build &amp;&amp; middleman deploy
+</pre>
+
+<p>して反映させよう。デプロイすればリポジトリにpushされるようになっている。<br>
+私はemacsを使用しているのでmarkdown-modeをインストールして <code>C-c C-c p</code> で記事の確認をしているので、各自記事を確認できるようにしておいたほうがいいだろう。  </p>
+
+<h2>最後に</h2>
+
+<p>これで最低限の環境は整った。<br>
+CSSやHTMLの設定は私がわからないのでここには書いていない。<br>
+はじめはとても殺風景だろうが、CSSやHTMLの勉強をしながら豪華なウェブサイトを構築してもらいたい。  </p>
+
     </div>
     
     <aside>

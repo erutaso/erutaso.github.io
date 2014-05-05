@@ -14,10 +14,160 @@
     <link rel="alternate" href="http://erutaso.jp/blog/2014/05/05/original-domain-obtained-on-valuedomain-middleman-github-pages/"/>
     <id>http://erutaso.jp/blog/2014/05/05/original-domain-obtained-on-valuedomain-middleman-github-pages/</id>
     <published>2014-05-05T16:25:00+09:00</published>
-    <updated>2014-05-05T22:11:52+09:00</updated>
+    <updated>2014-05-06T00:13:40+09:00</updated>
     <author>
       <name>ginko</name>
     </author>
-    <content type="html"></content>
+    <content type="html">&lt;h1&gt;初めに&lt;/h1&gt;
+
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.value-domain.com/"&gt;VALUEDOMAIN&lt;/a&gt;で独自ドメインを取得していること&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/"&gt;GitHub&lt;/a&gt;のアカウントを取得していること&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2&gt;1.VALUEDOMAIN側の設定をする&lt;/h2&gt;
+
+&lt;p&gt;1.メニューをクリック&lt;br&gt;
+2.取得済みドメイン一覧のDNSレコード/URL転送の変更をクリック&lt;br&gt;
+3.使用したい独自ドメインを選択&lt;br&gt;
+4.設定フィールドに &lt;code&gt;a @ 204.232.175.78&lt;/code&gt; と書き加える&lt;br&gt;
+5.保存する  &lt;/p&gt;
+
+&lt;p&gt;これでバリュードメイン側の設定は終わり。&lt;br&gt;
+ただ反映されるまで１５分ほどかかるのでその間に次の作業を進めよう。  &lt;/p&gt;
+
+&lt;h2&gt;2.GitHubでリポジトリを作成する&lt;/h2&gt;
+
+&lt;p&gt;リポジトリを作成する。&lt;br&gt;
+Repository nameは &lt;code&gt;username.github.io&lt;/code&gt; とする。usernameは各自のusernameを入れる。&lt;br&gt;
+READMEやLicenseはめんどくさくなるので設定しないほうがいいだろう。  &lt;/p&gt;
+
+&lt;h2&gt;3.Middlemanをインストールする&lt;/h2&gt;
+
+&lt;p&gt;Middlemanとブログ機能？をインストールする。&lt;br&gt;
+よくわからないけどブログのテンプレ的なものがあるらしい。  &lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;$gem install middleman
+$gem install middleman-blog
+&lt;/pre&gt;
+
+&lt;h3&gt;プロジェクトの初期化&lt;/h3&gt;
+
+&lt;p&gt;ブログのプロジェクトを作成する。&lt;br&gt;
+いろいろ便利かなと思って[Dropbox][]においた。一応GitHubで管理しているがこれなら家が燃えても大丈夫だろう。&lt;br&gt;
+GitHubというディレクトリを作成してその中で作業をする。&lt;br&gt;
+my-blogのところは各自好きなワードを入れるといい。 ex)my-site,mypage,new_project,etc&amp;hellip;&lt;br&gt;
+今回のプロジェクト名はmy-blogで統一する。  &lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;$cd ~/Dropbox/GitHub
+$middleman init my-blog --template=blog
+&lt;/pre&gt;
+
+&lt;h3&gt;リモートリポジトリの登録&lt;/h3&gt;
+
+&lt;p&gt;2で作ったusername.github.ioのリポジトリをremote登録する。  &lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;$cd my-blog
+$git init
+$git remote add origin git@github.com:username/username.github.io.git
+&lt;/pre&gt;
+
+&lt;h3&gt;Gemfileに書き加える&lt;/h3&gt;
+
+&lt;p&gt;ここで色々入れておけばシンタックスカラーリング等できるらしいがあまり理解できていないので恩恵を受けられていない。&lt;br&gt;
+後々便利になることを願って一応書き加えておく。  &lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;gem "therubyracer"
+&lt;/pre&gt;
+
+&lt;p&gt;はRails云々でエラーが出た時に入れればなんとかなると書いてあったが、私の環境でも同じエラーが出たため一応書き加えておいた。  &lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;gem "middleman-deploy"
+gem "middleman-livereload"
+gem "middleman-syntax"
+gem "nokogiri"
+gem 'redcarpet'
+gem "therubyracer"
+&lt;/pre&gt;
+
+&lt;p&gt;ここまで終わったら　&lt;code&gt;bundle install&lt;/code&gt; しておこう。&lt;br&gt;
+もしbundlerがない場合はインストールしておこう。  &lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;$gem install bundler
+&lt;/pre&gt;
+
+&lt;h3&gt;config.rbの中身を変更する&lt;/h3&gt;
+
+&lt;p&gt;開いてみると色々書いてあるが全部英語なのでとりあえず日本語の記事を探してみた。&lt;br&gt;
+コメントアウトされている中から適当に外していけば形になるらしい。  &lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;Time.zone = "Tokyo"
+blog.prefix = "blog"
+&lt;/pre&gt;
+
+&lt;p&gt;はタイムゾーンと階層？の名前を設定するらしい。&lt;br&gt;
+例えば、blogをentryとかにすれば&lt;a href="http://erutaso.jp/entry"&gt;http://erutaso.jp/entry&lt;/a&gt;となる。&lt;br&gt;
+調べたら&lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;activate :blog do |blog|
+  blog.name = "dogs"
+  blog.prefix = "dogs"
+end
+&lt;/pre&gt;
+
+&lt;p&gt;のようにしていけばいくらでもブログが作れるらしい。  &lt;/p&gt;
+
+&lt;p&gt;話がずれたが、その他の設定をしていく。&lt;br&gt;
+細かいレイアウト等の説明はめんどくさいからつまずいたところだけ書いていく。  &lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;activate :deploy do |deploy|
+  deploy.method = :git
+  deploy.branch = 'master'
+end
+&lt;/pre&gt;
+
+&lt;p&gt;これはデプロイしたときの設定でmasterブランチにpushするという設定らしい。&lt;br&gt;
+だからこれを &lt;code&gt;deploy.branch = &amp;#39;gh-pages&amp;#39;&lt;/code&gt; とすれば新しいブランチを作成してそこにpushするらしい。&lt;br&gt;
+ただそこに落とし穴があって、gh-pagesにpushしてもHPに反映されないということだ。&lt;br&gt;
+反映されるのはmasterブランチの中身であってgh-pagesにいくらpushしても本体には反映されないのでcheckoutしておいてrevaseするなりなんなりするといい。  &lt;/p&gt;
+
+&lt;h3&gt;デプロイして実際に反映させてみよう&lt;/h3&gt;
+
+&lt;p&gt;config.rbの中身をいじったのでデプロイすればブログの枠組みは完成するだろう。&lt;br&gt;
+まだ独自ドメインを設定したり記事を書くにはとかいろいろあるが、とりあえずデプロイしよう。&lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;$middleman build &amp;amp;&amp;amp; middleman deploy
+&lt;/pre&gt;
+
+&lt;p&gt;初デプロイはなかなか時間がかかるので１５分ほど時間を潰そう。次からはデプロイすればすぐに反映されるだろう。
+これで &lt;code&gt;http://username.github.io&lt;/code&gt; にアクセスすればシンプルなひな形とご対面できるだろう。  &lt;/p&gt;
+
+&lt;h3&gt;独自ドメインを使用する&lt;/h3&gt;
+
+&lt;p&gt;middlemanを使った場合、 &lt;code&gt;username.github.io&lt;/code&gt; 直下にCNAMEをおいても意味がない。&lt;br&gt;
+CNAMEの置き場はプロジェクト内のsourceの下だ。なので、&lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;$cd ~/Dropbox/GitHub/my-blog/source
+$echo example.com &amp;gt; CNAME
+&lt;/pre&gt;
+
+&lt;p&gt;とすれば独自ドメインが使用できるようになる。&lt;br&gt;
+階層は &lt;code&gt;tree&lt;/code&gt; を使えば一目瞭然だ。インストールされていない場合は、&lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;$apt-get install tree
+$tree -N PATH
+&lt;/pre&gt;
+
+&lt;p&gt;としてインストールしておこう。２つ目は文字化け対策らしい。  &lt;/p&gt;
+
+&lt;h3&gt;記事を書こう&lt;/h3&gt;
+
+&lt;p&gt;ブログの枠組みができたら次は記事を書こう。&lt;br&gt;
+記事を書くためには、&lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;$bundle exec middle article "title"
+&lt;/pre&gt;
+
+&lt;p&gt;とすれば、source/blogが作成されてそこにタイトルと日付とタグだけが書き込まれたmarkdownファイルが生成される。&lt;br&gt;
+この中身に好きなエディタで記事を書いて保存すれば完成だ。書き終わったら、&lt;/p&gt;
+&lt;pre class="highlight plaintext"&gt;$middleman build &amp;amp;&amp;amp; middleman deploy
+&lt;/pre&gt;
+
+&lt;p&gt;して反映させよう。デプロイすればリポジトリにpushされるようになっている。&lt;br&gt;
+私はemacsを使用しているのでmarkdown-modeをインストールして &lt;code&gt;C-c C-c p&lt;/code&gt; で記事の確認をしているので、各自記事を確認できるようにしておいたほうがいいだろう。  &lt;/p&gt;
+
+&lt;h2&gt;最後に&lt;/h2&gt;
+
+&lt;p&gt;これで最低限の環境は整った。&lt;br&gt;
+CSSやHTMLの設定は私がわからないのでここには書いていない。&lt;br&gt;
+はじめはとても殺風景だろうが、CSSやHTMLの勉強をしながら豪華なウェブサイトを構築してもらいたい。  &lt;/p&gt;
+</content>
   </entry>
 </feed>
