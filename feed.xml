@@ -10,15 +10,21 @@
     <name>ginko</name>
   </author>
   <entry>
-    <title>original domain obtained on valuedomain &amp; middleman &amp; github pages</title>
+    <title>バリュードメインで取得した独自ドメインを使ってMiddleman + github pagesでブログを書こう</title>
     <link rel="alternate" href="http://erutaso.jp/blog/2014/05/05/original-domain-obtained-on-valuedomain-middleman-github-pages/"/>
     <id>http://erutaso.jp/blog/2014/05/05/original-domain-obtained-on-valuedomain-middleman-github-pages/</id>
     <published>2014-05-05T16:25:00+09:00</published>
-    <updated>2014-05-05T20:08:45+09:00</updated>
+    <updated>2014-05-05T20:43:11+09:00</updated>
     <author>
       <name>ginko</name>
     </author>
-    <content type="html">&lt;h2&gt;テスト&lt;/h2&gt;
+    <content type="html">&lt;p&gt;はじめに書いておくが、これはwebがわからない情弱が躓きながらも承認欲求も満たすためにブログを作ろうとし、その過程を承認欲求を満たすために書いたものなのでググりゃわかるやろｗという人はブラウザバックをおすすめする。  &lt;/p&gt;
+
+&lt;p&gt;さらに私は性格が悪いのでわかりにくかったところに対してネチネチとしたツッコミをいれるのでそれが嫌な人もブラウザバックしたほうがいいだろう。  &lt;/p&gt;
+
+&lt;p&gt;この記事はバリュードメインで独自ドメインを取得していて尚且つgithubのアカウントを取得していることを前提としているため、&lt;/p&gt;
+
+&lt;h1&gt;テスト&lt;/h1&gt;
 
 &lt;h1&gt;test&lt;/h1&gt;
 </content>
