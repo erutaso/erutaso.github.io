@@ -14,7 +14,7 @@
     <link rel="alternate" href="http://erutaso.jp/blog/2014/05/05/original-domain-obtained-on-valuedomain-middleman-github-pages/"/>
     <id>http://erutaso.jp/blog/2014/05/05/original-domain-obtained-on-valuedomain-middleman-github-pages/</id>
     <published>2014-05-05T16:25:00+09:00</published>
-    <updated>2014-05-06T00:13:40+09:00</updated>
+    <updated>2014-05-06T00:15:30+09:00</updated>
     <author>
       <name>ginko</name>
     </author>
@@ -167,7 +167,7 @@ $tree -N PATH
 
 &lt;p&gt;これで最低限の環境は整った。&lt;br&gt;
 CSSやHTMLの設定は私がわからないのでここには書いていない。&lt;br&gt;
-はじめはとても殺風景だろうが、CSSやHTMLの勉強をしながら豪華なウェブサイトを構築してもらいたい。  &lt;/p&gt;
+はじめはとても殺風景だろうが、CSSやHTML、JavaScriptの勉強をしながら豪華なウェブサイトを構築してもらいたい。  &lt;/p&gt;
 </content>
   </entry>
 </feed>
