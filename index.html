@@ -16,14 +16,14 @@
   <h2><a href="/blog/2014/05/05/original-domain-obtained-on-valuedomain-middleman-github-pages/">バリュードメインで取得した独自ドメインを使ってMiddleman + github pagesでブログを書こう</a> <span>May  5</span></h2>
   <!-- use article.summary(250) if you have Nokogiri available to show just
        the first 250 characters -->
-  <h1>初めに</h1>
+  <h1 id="初めに">初めに</h1>
 
 <ul>
 <li><a href="http://www.value-domain.com/">VALUEDOMAIN</a>で独自ドメインを取得していること</li>
 <li><a href="https://github.com/">GitHub</a>のアカウントを取得していること</li>
 </ul>
 
-<h2>1.VALUEDOMAIN側の設定をする</h2>
+<h2 id="1.valuedomain側の設定をする">1.VALUEDOMAIN側の設定をする</h2>
 
 <p>1.メニューをクリック<br>
 2.取得済みドメイン一覧のDNSレコード/URL転送の変更をクリック<br>
@@ -34,13 +34,13 @@
 <p>これでバリュードメイン側の設定は終わり。<br>
 ただ反映されるまで１５分ほどかかるのでその間に次の作業を進めよう。  </p>
 
-<h2>2.GitHubでリポジトリを作成する</h2>
+<h2 id="2.githubでリポジトリを作成する">2.GitHubでリポジトリを作成する</h2>
 
 <p>リポジトリを作成する。<br>
 Repository nameは <code>username.github.io</code> とする。usernameは各自のusernameを入れる。<br>
 READMEやLicenseはめんどくさくなるので設定しないほうがいいだろう。  </p>
 
-<h2>3.Middlemanをインストールする</h2>
+<h2 id="3.middlemanをインストールする">3.Middlemanをインストールする</h2>
 
 <p>Middlemanとブログ機能？をインストールする。<br>
 よくわからないけどブログのテンプレ的なものがあるらしい。  </p>
@@ -48,7 +48,7 @@ READMEやLicenseはめんどくさくなるので設定しないほうがいい�
 $gem install middleman-blog
 </pre>
 
-<h3>プロジェクトの初期化</h3>
+<h3 id="プロジェクトの初期化">プロジェクトの初期化</h3>
 
 <p>ブログのプロジェクトを作成する。<br>
 いろいろ便利かなと思ってDropboxにおいた。一応GitHubで管理しているがこれなら家が燃えても大丈夫だろう。<br>
@@ -59,7 +59,7 @@ my-blogのところは各自好きなワードを入れるといい。 ex)my-sit
 $middleman init my-blog --template=blog
 </pre>
 
-<h3>リモートリポジトリの登録</h3>
+<h3 id="リモートリポジトリの登録">リモートリポジトリの登録</h3>
 
 <p>2で作ったusername.github.ioのリポジトリをremote登録する。  </p>
 <pre class="highlight plaintext">$cd my-blog
@@ -67,7 +67,7 @@ $git init
 $git remote add origin git@github.com:username/username.github.io.git
 </pre>
 
-<h3>Gemfileに書き加える</h3>
+<h3 id="gemfileに書き加える">Gemfileに書き加える</h3>
 
 <p>ここで色々入れておけばシンタックスカラーリング等できるらしいがあまり理解できていないので恩恵を受けられていない。<br>
 後々便利になることを願って一応書き加えておく。  </p>
@@ -88,7 +88,7 @@ gem "therubyracer"
 <pre class="highlight plaintext">$gem install bundler
 </pre>
 
-<h3>config.rbの中身を変更する</h3>
+<h3 id="config.rbの中身を変更する">config.rbの中身を変更する</h3>
 
 <p>開いてみると色々書いてあるが全部英語なのでとりあえず日本語の記事を探してみた。<br>
 コメントアウトされている中から適当に外していけば形になるらしい。  </p>
@@ -120,7 +120,7 @@ end
 ただそこに落とし穴があって、gh-pagesにpushしてもHPに反映されないということだ。<br>
 反映されるのはmasterブランチの中身であってgh-pagesにいくらpushしても本体には反映されないのでcheckoutしておいてrevaseするなりなんなりするといい。  </p>
 
-<h3>デプロイして実際に反映させてみよう</h3>
+<h3 id="デプロイして実際に反映させてみよう">デプロイして実際に反映させてみよう</h3>
 
 <p>config.rbの中身をいじったのでデプロイすればブログの枠組みは完成するだろう。<br>
 まだ独自ドメインを設定したり記事を書くにはとかいろいろあるが、とりあえずデプロイしよう。</p>
@@ -130,7 +130,7 @@ end
 <p>初デプロイはなかなか時間がかかるので１５分ほど時間を潰そう。次からはデプロイすればすぐに反映されるだろう。
 これで <code>http://username.github.io</code> にアクセスすればシンプルなひな形とご対面できるだろう。  </p>
 
-<h3>独自ドメインを使用する</h3>
+<h3 id="独自ドメインを使用する">独自ドメインを使用する</h3>
 
 <p>middlemanを使った場合、 <code>username.github.io</code> 直下にCNAMEをおいても意味がない。<br>
 CNAMEの置き場はプロジェクト内のsourceの下だ。なので、</p>
@@ -146,7 +146,7 @@ $tree -N PATH
 
 <p>としてインストールしておこう。２つ目は文字化け対策らしい。  </p>
 
-<h3>記事を書こう</h3>
+<h3 id="記事を書こう">記事を書こう</h3>
 
 <p>ブログの枠組みができたら次は記事を書こう。<br>
 記事を書くためには、</p>
@@ -161,13 +161,13 @@ $tree -N PATH
 <p>して反映させよう。デプロイすればリポジトリにpushされるようになっている。<br>
 私はemacsを使用しているのでmarkdown-modeをインストールして <code>C-c C-c p</code> で記事の確認をしているので、各自記事を確認できるようにしておいたほうがいいだろう。  </p>
 
-<h2>最後に</h2>
+<h2 id="最後に">最後に</h2>
 
 <p>これで最低限の環境は整った。<br>
 CSSやHTMLの設定は私がわからないのでここには書いていない。<br>
 はじめはとても殺風景だろうが、CSSやHTML、JavaScriptの勉強をしながら豪華なウェブサイトを構築してもらいたい。  </p>
 
-<h2>参考</h2>
+<h2 id="参考">参考</h2>
 
 <ul>
 <li><a href="http://blog.awairo.net/blog/2013/12/14/custom-domain-for-gh-pages/">GitHub Pagesで独自ドメインを使う方法</a></li>

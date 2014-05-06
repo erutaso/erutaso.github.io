@@ -18,14 +18,14 @@
     <author>
       <name>ginko</name>
     </author>
-    <content type="html">&lt;h1&gt;初めに&lt;/h1&gt;
+    <content type="html">&lt;h1 id="初めに"&gt;初めに&lt;/h1&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://www.value-domain.com/"&gt;VALUEDOMAIN&lt;/a&gt;で独自ドメインを取得していること&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://github.com/"&gt;GitHub&lt;/a&gt;のアカウントを取得していること&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h2&gt;1.VALUEDOMAIN側の設定をする&lt;/h2&gt;
+&lt;h2 id="1.valuedomain側の設定をする"&gt;1.VALUEDOMAIN側の設定をする&lt;/h2&gt;
 
 &lt;p&gt;1.メニューをクリック&lt;br&gt;
 2.取得済みドメイン一覧のDNSレコード/URL転送の変更をクリック&lt;br&gt;
@@ -36,13 +36,13 @@
 &lt;p&gt;これでバリュードメイン側の設定は終わり。&lt;br&gt;
 ただ反映されるまで１５分ほどかかるのでその間に次の作業を進めよう。  &lt;/p&gt;
 
-&lt;h2&gt;2.GitHubでリポジトリを作成する&lt;/h2&gt;
+&lt;h2 id="2.githubでリポジトリを作成する"&gt;2.GitHubでリポジトリを作成する&lt;/h2&gt;
 
 &lt;p&gt;リポジトリを作成する。&lt;br&gt;
 Repository nameは &lt;code&gt;username.github.io&lt;/code&gt; とする。usernameは各自のusernameを入れる。&lt;br&gt;
 READMEやLicenseはめんどくさくなるので設定しないほうがいいだろう。  &lt;/p&gt;
 
-&lt;h2&gt;3.Middlemanをインストールする&lt;/h2&gt;
+&lt;h2 id="3.middlemanをインストールする"&gt;3.Middlemanをインストールする&lt;/h2&gt;
 
 &lt;p&gt;Middlemanとブログ機能？をインストールする。&lt;br&gt;
 よくわからないけどブログのテンプレ的なものがあるらしい。  &lt;/p&gt;
@@ -50,7 +50,7 @@ READMEやLicenseはめんどくさくなるので設定しないほうがいい�
 $gem install middleman-blog
 &lt;/pre&gt;
 
-&lt;h3&gt;プロジェクトの初期化&lt;/h3&gt;
+&lt;h3 id="プロジェクトの初期化"&gt;プロジェクトの初期化&lt;/h3&gt;
 
 &lt;p&gt;ブログのプロジェクトを作成する。&lt;br&gt;
 いろいろ便利かなと思ってDropboxにおいた。一応GitHubで管理しているがこれなら家が燃えても大丈夫だろう。&lt;br&gt;
@@ -61,7 +61,7 @@ my-blogのところは各自好きなワードを入れるといい。 ex)my-sit
 $middleman init my-blog --template=blog
 &lt;/pre&gt;
 
-&lt;h3&gt;リモートリポジトリの登録&lt;/h3&gt;
+&lt;h3 id="リモートリポジトリの登録"&gt;リモートリポジトリの登録&lt;/h3&gt;
 
 &lt;p&gt;2で作ったusername.github.ioのリポジトリをremote登録する。  &lt;/p&gt;
 &lt;pre class="highlight plaintext"&gt;$cd my-blog
@@ -69,7 +69,7 @@ $git init
 $git remote add origin git@github.com:username/username.github.io.git
 &lt;/pre&gt;
 
-&lt;h3&gt;Gemfileに書き加える&lt;/h3&gt;
+&lt;h3 id="gemfileに書き加える"&gt;Gemfileに書き加える&lt;/h3&gt;
 
 &lt;p&gt;ここで色々入れておけばシンタックスカラーリング等できるらしいがあまり理解できていないので恩恵を受けられていない。&lt;br&gt;
 後々便利になることを願って一応書き加えておく。  &lt;/p&gt;
@@ -90,7 +90,7 @@ gem "therubyracer"
 &lt;pre class="highlight plaintext"&gt;$gem install bundler
 &lt;/pre&gt;
 
-&lt;h3&gt;config.rbの中身を変更する&lt;/h3&gt;
+&lt;h3 id="config.rbの中身を変更する"&gt;config.rbの中身を変更する&lt;/h3&gt;
 
 &lt;p&gt;開いてみると色々書いてあるが全部英語なのでとりあえず日本語の記事を探してみた。&lt;br&gt;
 コメントアウトされている中から適当に外していけば形になるらしい。  &lt;/p&gt;
@@ -122,7 +122,7 @@ end
 ただそこに落とし穴があって、gh-pagesにpushしてもHPに反映されないということだ。&lt;br&gt;
 反映されるのはmasterブランチの中身であってgh-pagesにいくらpushしても本体には反映されないのでcheckoutしておいてrevaseするなりなんなりするといい。  &lt;/p&gt;
 
-&lt;h3&gt;デプロイして実際に反映させてみよう&lt;/h3&gt;
+&lt;h3 id="デプロイして実際に反映させてみよう"&gt;デプロイして実際に反映させてみよう&lt;/h3&gt;
 
 &lt;p&gt;config.rbの中身をいじったのでデプロイすればブログの枠組みは完成するだろう。&lt;br&gt;
 まだ独自ドメインを設定したり記事を書くにはとかいろいろあるが、とりあえずデプロイしよう。&lt;/p&gt;
@@ -132,7 +132,7 @@ end
 &lt;p&gt;初デプロイはなかなか時間がかかるので１５分ほど時間を潰そう。次からはデプロイすればすぐに反映されるだろう。
 これで &lt;code&gt;http://username.github.io&lt;/code&gt; にアクセスすればシンプルなひな形とご対面できるだろう。  &lt;/p&gt;
 
-&lt;h3&gt;独自ドメインを使用する&lt;/h3&gt;
+&lt;h3 id="独自ドメインを使用する"&gt;独自ドメインを使用する&lt;/h3&gt;
 
 &lt;p&gt;middlemanを使った場合、 &lt;code&gt;username.github.io&lt;/code&gt; 直下にCNAMEをおいても意味がない。&lt;br&gt;
 CNAMEの置き場はプロジェクト内のsourceの下だ。なので、&lt;/p&gt;
@@ -148,7 +148,7 @@ $tree -N PATH
 
 &lt;p&gt;としてインストールしておこう。２つ目は文字化け対策らしい。  &lt;/p&gt;
 
-&lt;h3&gt;記事を書こう&lt;/h3&gt;
+&lt;h3 id="記事を書こう"&gt;記事を書こう&lt;/h3&gt;
 
 &lt;p&gt;ブログの枠組みができたら次は記事を書こう。&lt;br&gt;
 記事を書くためには、&lt;/p&gt;
@@ -163,13 +163,13 @@ $tree -N PATH
 &lt;p&gt;して反映させよう。デプロイすればリポジトリにpushされるようになっている。&lt;br&gt;
 私はemacsを使用しているのでmarkdown-modeをインストールして &lt;code&gt;C-c C-c p&lt;/code&gt; で記事の確認をしているので、各自記事を確認できるようにしておいたほうがいいだろう。  &lt;/p&gt;
 
-&lt;h2&gt;最後に&lt;/h2&gt;
+&lt;h2 id="最後に"&gt;最後に&lt;/h2&gt;
 
 &lt;p&gt;これで最低限の環境は整った。&lt;br&gt;
 CSSやHTMLの設定は私がわからないのでここには書いていない。&lt;br&gt;
 はじめはとても殺風景だろうが、CSSやHTML、JavaScriptの勉強をしながら豪華なウェブサイトを構築してもらいたい。  &lt;/p&gt;
 
-&lt;h2&gt;参考&lt;/h2&gt;
+&lt;h2 id="参考"&gt;参考&lt;/h2&gt;
 
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://blog.awairo.net/blog/2013/12/14/custom-domain-for-gh-pages/"&gt;GitHub Pagesで独自ドメインを使う方法&lt;/a&gt;&lt;/li&gt;
